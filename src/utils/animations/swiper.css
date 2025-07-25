@@ -1,0 +1,9 @@
+.swiper.is-icons,
+.swiper.is-wearables {
+  overflow: visible;
+}
+
+.swiper.is-icons .swiper-wrapper,
+.swiper.is-wearables .swiper-wrapper {
+  transition-timing-function: linear;
+}
