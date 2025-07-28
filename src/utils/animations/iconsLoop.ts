@@ -24,10 +24,12 @@ export function iconsLoop() {
       },
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 4,
+          spaceBetween: 16 * 2,
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 'auto',
+          spaceBetween: 16 * 2,
         },
         992: {
           slidesPerView: 'auto',
