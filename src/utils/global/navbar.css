@@ -1,0 +1,25 @@
+/* Animations pour le navbar mobile */
+@media screen and (max-width: 991px) {
+  .navbar_menu-layer {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .navbar_menu-layer.navbar-overlay-visible {
+    transition-delay: 0.3s;
+    opacity: 0.5;
+  }
+
+  .navbar_menu-wrapper {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out;
+  }
+
+  .navbar_menu-wrapper.navbar-modal-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
