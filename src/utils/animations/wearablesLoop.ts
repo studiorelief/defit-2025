@@ -28,10 +28,10 @@ export const wearablesLoop = () => {
           slidesPerView: 3,
         },
         768: {
-          slidesPerView: 6,
+          slidesPerView: 'auto',
         },
         992: {
-          slidesPerView: 10,
+          slidesPerView: 'auto',
         },
       },
     });

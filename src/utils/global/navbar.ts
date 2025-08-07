@@ -46,3 +46,51 @@ export function navbarMobile() {
     });
   }
 }
+
+export function navbarScrollBehavior() {
+  const navbar = document.querySelector('.navbar_component') as HTMLElement;
+  if (!navbar) return;
+
+  let scrollTimer: ReturnType<typeof setTimeout>;
+
+  const handleScroll = () => {
+    // Remettre la navbar à sa position normale et visible quand on scroll
+    navbar.style.transform = 'translateY(0)';
+    navbar.style.opacity = '1';
+
+    // Réinitialiser le timer
+    clearTimeout(scrollTimer);
+
+    // Détecter la fin du scroll
+    scrollTimer = setTimeout(() => {
+      // Si l'utilisateur est en haut de la page, laisser la navbar visible
+      if (window.scrollY === 0) {
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.opacity = '1';
+      } else {
+        // Sinon, positionner la navbar à -10rem quand le scroll s'arrête
+        navbar.style.transform = 'translateY(-10rem)';
+        navbar.style.opacity = '0';
+      }
+    }, 300); // Délai pour détecter la fin du scroll
+  };
+
+  // Position initiale : si en haut de page, visible, sinon cachée
+  if (window.scrollY === 0) {
+    navbar.style.transform = 'translateY(0)';
+    navbar.style.opacity = '1';
+  } else {
+    navbar.style.transform = 'translateY(-10rem)';
+    navbar.style.opacity = '0';
+  }
+  navbar.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+
+  // Écouter les événements de scroll
+  window.addEventListener('scroll', handleScroll, { passive: true });
+}
+
+// Fonction principale pour initialiser toutes les fonctionnalités de la navbar
+export function initNavbar() {
+  navbarMobile();
+  navbarScrollBehavior();
+}

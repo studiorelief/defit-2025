@@ -10,7 +10,7 @@ export function iconsLoop() {
       direction: 'horizontal',
       loop: true,
       centeredSlides: false,
-      autoHeight: true,
+      // autoHeight: true,
       spaceBetween: 96,
       speed: 2500,
       autoplay: {

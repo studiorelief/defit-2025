@@ -1,17 +1,18 @@
 import './index.css';
 
-import { initMarker } from './global/marker';
-import { navbarMobile } from './global/navbar';
 import { heroAnimation } from './utils/animations/animationLoad';
 import { replaceHeroHeadings, swiperCrossfade } from './utils/animations/heroTextLoop';
 import { iconsLoop } from './utils/animations/iconsLoop';
 import { wearablesLoop } from './utils/animations/wearablesLoop';
+import { initMarker } from './utils/global/marker';
+import { navbarMobile, navbarScrollBehavior } from './utils/global/navbar';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   /* marker */
   initMarker();
   navbarMobile();
+  navbarScrollBehavior();
 
   /* CC animations */
   replaceHeroHeadings();
