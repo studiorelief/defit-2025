@@ -12,8 +12,11 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   /* marker */
   initMarker();
-  navbarMobile();
-  navbarScrollBehavior();
+  if (window.innerWidth > 992) {
+    navbarScrollBehavior();
+  } else {
+    navbarMobile();
+  }
 
   /* CC animations */
   replaceHeroHeadings();
