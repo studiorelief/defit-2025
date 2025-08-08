@@ -72,7 +72,7 @@ export function navbarScrollBehavior() {
         navbar.style.transform = 'translateY(-10rem)';
         navbar.style.opacity = '0';
       }
-    }, 300); // Délai pour détecter la fin du scroll
+    }, 2000); // Délai pour détecter la fin du scroll
   };
 
   // Position initiale : si en haut de page, visible, sinon cachée

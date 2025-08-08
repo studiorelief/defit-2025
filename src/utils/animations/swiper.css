@@ -7,3 +7,37 @@
 .swiper.is-wearables .swiper-wrapper {
   transition-timing-function: linear;
 }
+
+/* Step 2 Swiper with crossfade */
+.swiper.is-step-2 {
+  overflow: hidden;
+}
+
+.swiper.is-step-2 .swiper-wrapper {
+  transition-timing-function: ease-in-out;
+}
+
+.swiper.is-step-2 .swiper-slide {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.swiper.is-step-2 .swiper-slide-active {
+  opacity: 1;
+}
+
+/* Carrousel phone Step 2 */
+
+.swiper-slide.is-step-2 .home_steps_layout-2-phone {
+  scale: 0;
+  opacity: 0;
+  transition:
+    scale 0.4s ease-out,
+    opacity 0.4s ease-out;
+}
+
+.swiper-slide.is-step-2.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active
+  .home_steps_layout-2-phone {
+  scale: 1;
+  opacity: 1;
+}

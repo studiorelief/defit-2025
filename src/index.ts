@@ -3,6 +3,7 @@ import './index.css';
 import { heroAnimation } from './utils/animations/animationLoad';
 import { replaceHeroHeadings, swiperCrossfade } from './utils/animations/heroTextLoop';
 import { iconsLoop } from './utils/animations/iconsLoop';
+import { initStep2Swiper } from './utils/animations/step2SwiperLoop';
 import { wearablesLoop } from './utils/animations/wearablesLoop';
 import { initMarker } from './utils/global/marker';
 import { navbarMobile, navbarScrollBehavior } from './utils/global/navbar';
@@ -24,4 +25,5 @@ window.Webflow.push(() => {
   /* Loop animations */
   iconsLoop();
   wearablesLoop();
+  initStep2Swiper();
 });
