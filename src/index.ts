@@ -5,6 +5,7 @@ import { replaceHeroHeadings, swiperCrossfade } from './utils/animations/heroTex
 import { iconsLoop } from './utils/animations/iconsLoop';
 import { initStep2Swiper } from './utils/animations/step2SwiperLoop';
 import { wearablesLoop } from './utils/animations/wearablesLoop';
+import { getNumbers } from './utils/api/getNumbers';
 import { initMarker } from './utils/global/marker';
 import { navbarMobile, navbarScrollBehavior } from './utils/global/navbar';
 
@@ -29,4 +30,6 @@ window.Webflow.push(() => {
   iconsLoop();
   wearablesLoop();
   initStep2Swiper();
+
+  getNumbers();
 });
